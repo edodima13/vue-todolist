@@ -17,7 +17,11 @@ var app = new Vue({
         ],
     } ,
     methods : {
-    addToDo : function() {
+    removeToDo : function(index) {
+        this.todoItems.splice(index, 1)
     }
     }
 })
+
+
+

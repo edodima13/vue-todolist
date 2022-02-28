@@ -11,17 +11,18 @@
 </head>
 <body>
     <div id="root">
+        <!--sezione per aggiungere la todolist-->
         <!--stampare all'interno di una lista un item per ogni todo-->
         <div class="todo-wrapper">
             <ul class="">
-                <li v-for="todo in todoItems" class="lista" :class="todo.done ?  'done' : '' ">
-                    {{todo.text}}
-                    <i class="fa-solid fa-xmark" @click=""></i>
+        <!--se la proprietà done è uguale a true visualizzare il testo sbarrato-->
+                <li v-for="(todo,index) in todoItems" class="lista" >
+                    <span :class="todo.done ?  'done' : '' ">{{todo.text}}</span>
+                    <i class="fa-solid fa-xmark" @click="removeToDo(index)"></i>
                 </li>
             </ul>
         </div>
         
-        <!--se la proprietà done è uguale a true visualizzare il testo sbarrato-->
     </div>
     
     <script src="myjavascript.js"></script>
