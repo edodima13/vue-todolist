@@ -12,12 +12,18 @@
 <body>
     <div id="root">
         <!--sezione per aggiungere la todolist-->
+        <header>
+            <input type="text" v-model="newItems">
+            <button class="add-items" @click="addItems">add</button>
+        </header>
         <!--stampare all'interno di una lista un item per ogni todo-->
         <div class="todo-wrapper">
             <ul class="">
         <!--se la proprietà done è uguale a true visualizzare il testo sbarrato-->
                 <li v-for="(todo,index) in todoItems" class="lista" >
-                    <span :class="todo.done ?  'done' : '' ">{{todo.text}}</span>
+                    <span :class="todo.done ?  'done' : '' ">
+                        {{todo.text}}
+                    </span>
                     <i class="fa-solid fa-xmark" @click="removeToDo(index)"></i>
                 </li>
             </ul>

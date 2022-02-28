@@ -1,3 +1,23 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.add-items{
+    background-color: green;
+    border-radius: 999px;
+    padding: 5px;
+    color: white;
+}
+
 .done{
     text-decoration: line-through;
 }
@@ -9,17 +29,24 @@ ul{
     border-radius: 20px;
 }
 
-body > div{
+body .todo-wrapper{
+    padding: 20px;
     display: flex;
     justify-content: center;
 }
 
 .todo-wrapper{
+    margin: 0 auto;
     background-color: green;
     width: 700px;
     min-height: 70vh;
     border-radius: 30px;
 }
+
+button{
+    border: none;
+}
+
 
 .lista{
     width: 400px;
