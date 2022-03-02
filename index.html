@@ -18,7 +18,7 @@
         </header>
         <!--stampare all'interno di una lista un item per ogni todo-->
         <div class="todo-wrapper">
-            <ul class="">
+            <ul>
         <!--se la proprietà done è uguale a true visualizzare il testo sbarrato-->
                 <li v-for="(todo,index) in todoItems" class="lista" >
                     <span :class="todo.done ?  'done' : '' ">

@@ -20,12 +20,11 @@ var app = new Vue({
     } ,
     methods : {
     addItems : function(){
-        const newItems = {
-            text:this.newItems,
-            done:false
-        }
-        console.log(newItems)
-        this.todoItems.push(this.newItems)
+        const newTodo = {
+            text: this.newItems,
+            done: false
+        } 
+        this.todoItems.push(newTodo);
     },
     removeToDo : function(index) {
         this.todoItems.splice(index, 1)
